@@ -7,7 +7,7 @@ import TypeWriter from 'react-native-typewriter';
 function SplashScreen({navigation}) {
   setTimeout(()=>{
     navigation.navigate('Home');
-  },20000);
+  },10000);
   return (
     <View style={{ flex: 1, alignItems: 'center',backgroundColor:'#001845', justifyContent: 'center' }}>
       <Image
