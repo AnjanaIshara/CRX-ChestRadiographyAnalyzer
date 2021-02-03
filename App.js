@@ -4,6 +4,7 @@ import { View, Text,Button,Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TypeWriter from 'react-native-typewriter';
+import DetailsScreen from './views/DetailsScreen';
 function SplashScreen({navigation}) {
   setTimeout(()=>{
     navigation.navigate('Home');
@@ -32,17 +33,7 @@ function HomeScreen({navigation}) {
     </View>
   );
 }
-function DetailsScreen({navigation}) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Home')}
-      />
-    </View>
-  );
-}
+
 
 const Stack = createStackNavigator();
 
