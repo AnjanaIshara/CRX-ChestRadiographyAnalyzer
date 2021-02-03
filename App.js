@@ -1,10 +1,11 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { View, Text,Button,Image } from 'react-native';
+import { View, Text,Button,Image,TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import TypeWriter from 'react-native-typewriter';
 import DetailsScreen from './views/DetailsScreen';
+import PredictionScreen from './views/PredictionScreen';
 function SplashScreen({navigation}) {
   setTimeout(()=>{
     navigation.navigate('Home');
@@ -30,6 +31,9 @@ function HomeScreen({navigation}) {
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
       />
+      <TouchableOpacity onPress={() => navigation.navigate('Prediction')}>
+         <Text>Get Predicitons</Text>
+     </TouchableOpacity>
     </View>
   );
 }
@@ -44,6 +48,7 @@ function App() {
       <Stack.Screen name="Splash" component={SplashScreen} options= {{ headerShown: false }} />
         <Stack.Screen name="Home" component={HomeScreen} options= {{ headerShown: false }} />
         <Stack.Screen name="Details" component={DetailsScreen} options= {{ headerShown: false }} />
+        <Stack.Screen name="Prediction" component={PredictionScreen} options= {{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
