@@ -8,6 +8,8 @@ target 'CRX2' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+
   target 'CRX2Tests' do
     inherit! :complete
     # Pods for testing
