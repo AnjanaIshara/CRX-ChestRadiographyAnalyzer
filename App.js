@@ -9,7 +9,7 @@ import PredictionScreen from './views/PredictionScreen';
 function SplashScreen({navigation}) {
   setTimeout(()=>{
     navigation.navigate('Home');
-  },4000);
+  },4700);
   return (
     <View style={{ flex: 1, alignItems: 'center',backgroundColor:'#001845', justifyContent: 'center' }}>
       <Image
